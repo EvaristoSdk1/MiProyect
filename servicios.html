@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="serviciostyle.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<!--INICION DE LA BARRA DE NAVEGACION ENTRE EL SITIO WEB-->
+	<nav class="nav navbar navbar-toggleable-md bg-faded navbar-inverse">
+		<div class="container">
+		<div class="navbar-brand" id="Logo" >
+			<a href="#"><img src="img/settings-1.png" width="30" height="30" class="d-inline-block align-top"></a>
+		</div>
+		<div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav MenuInicio ">
+	        <li class="nav-item">
+	        	<a class="nav-link" href="index.html">Inicio</a>
+	        </li>
+
+	        <li class="nav-item">
+	        	<a class="nav-link" href="#">Conocenos</a>
+	        </li class="nav-item">
+	        
+	        <li class="nav-item">
+	        	<a class="nav-link" href="catalogoProductos.html">Catalogos</a>
+	        </li>
+			
+			<li>
+				<a class="nav-link" href="#">Servicios</a>
+			</li>
+	      </ul>
+
+	      <ul class="nav navbar-nav navbar-right user">
+	        <li class="dropdown">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration:none;"><img src="img/user.png" alt="">Tu Cuenta<span class="caret"></span></a>
+				<ul class="dropdown-menu" id="TuCuenta">
+				<div class="container" style="width: 370px;" >
+					<h4 id="TIniciarS">Iniciar Sesion</h4>
+
+					<form role="form">
+						<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input type="text" class="form-control" id="focusedInput" placeholder="Nombre de Usuario">
+						</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><b style="font-weight:800;"> #</b></span>
+								<input type="text" class="form-control" id="focusedInput" placeholder="Contraseña">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-6 pull-right">
+								<button class="btn btn-primary pull-right" data-href="#">SIGN IN</button>
+							</div>
+						</div><hr><br>
+					</form>
+
+					<br>
+					<p class="text-center" style="font-size:90%;">
+						<span class="col-sm-6"><a data-href="#fpassword" style="color:white;  text-decoration:none; cursor:pointer">Olvidaste tu contraseña?</a></span>
+						<span class="col-sm-6"><a data-href="#naccount" style="color:white; text-decoration:none;">No tienes una cuenta?<span style="color:red; cursor:pointer"> Crear Cuenta</span></a></span>
+					</p>
+
+				</div>
+				</ul>  
+	        </li>
+
+	        <li>
+	        	<a href="#" style="text-decoration:none;"><i class="glyphicon glyphicon-shopping-cart iconoVentas"></i>Tu carrito</a>
+	        </li>
+
+	      </ul>
+	    </div>
+	  	</div>
+	</nav>
+<!--FINAL DE LA BARRA DE NAVEGACION ENTRE EL SITIO WEB-->
+
+	<div id="servicios">
+		<label style="font-size: 40px; padding-left: 40%;">
+			SERVICIOS
+		</label>
+	</div><br>
+
+	<div class="container">
+		<label style="font-size: 30px; word-break: break-all; font-weight: normal;">
+			Nuestra tienda online ofrece diferentes servicios: Pedidos online, seguimiento de tu pedido, soporte tecnico las 24 hrs,  
+		</label>
+	</div><br><br>
+
+	<div class="container" id="contenedor">
+		<div id="serviciosarea1">
+		<div class="panel panel-default" >
+		<div class="panel-heading">
+			<h3 class="panel-title">Panel title</h3>
+		</div>
+		<div class="panel-body">
+			<img src="img/ferreteria.jpg" alt="" class="img-responsive">
+		</div>
+		<br><hr>
+			<label style="word-break: break-all;">
+				Descripccionsdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffssssssssssssssssssssssssssssssssssssfsssssdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+			</label>
+		</div>
+		</div>
+
+		<div id="serviciosarea2">
+		<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Panel title</h3>
+		</div>
+		<div class="panel-body">
+			<img src="img/ferreteria.jpg" alt="" class="img-responsive">
+		</div>
+		<br><hr>
+			<label>
+				Descripccion
+			</label>
+		</div>
+		</div>
+
+		<div id="serviciosarea3">
+		<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Panel title</h3>
+		</div>
+		<div class="panel-body">
+			<img src="img/ferreteria.jpg" alt="" class="img-responsive">
+		</div>
+		<br><hr>
+			<label>
+				Descripccion
+			</label>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

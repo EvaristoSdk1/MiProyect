@@ -1,0 +1,54 @@
+.drag-drop {
+    width: 70%;
+    height: 40px;
+    background-color: #163173;
+    border-radius: 2em;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+ 
+input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	width: 100%; 
+	z-index: 3;
+}
+
+#contenedor1 {
+	float: left;
+}
+
+#contenedor2 {
+	float: left;
+	padding-left: 10%;
+}
+
+#contenedores {
+	overflow: hidden;
+}
+/* Estilo del área del input[file] con :hover */
+ 
+.drag-drop:hover, input[type="file"]:hover {
+    background-color: #3276b1;
+    cursor: pointer;
+}
+ 
+.drag-drop:hover span.desc {
+    color: #fff;
+} 
+
+
+.thumb{
+	width: 270px; 
+    height: 200px;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+.panel {
+	width: 300px; 
+    height: 250px;
+    overflow:hidden;
+
+}

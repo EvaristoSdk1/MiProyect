@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="agregarpstyle.css">
+  	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container" id="contenedores">
+	<div class="table-responsive" id="contenedor1">
+	<form action="enviarformularioregistro.php" method="POST">
+		<table class="table" >
+			<tr>
+				<td class="form-group">
+					<label>
+						Id producto:
+					</label>
+					<input type="text" class="form-control" name="id_producto">
+				</td>
+
+				<td class="form-group">
+					<label>
+						Id proveedor:
+					</label>
+					<input type="text" class="form-control" name="id_proveedor">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="form-group">
+					<label>
+						Nombre del producto
+					</label>
+					<input type="text" class="form-control" name="nombre">
+				</td>
+
+				<td class="form-group">
+					<label>
+						Precio
+					</label>
+					<input type="text" class="form-control" name="precio">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="form-group">
+					<label>
+						Cantidad
+					</label>
+					<input type="text" class="form-control" name="cantidad">
+				</td>
+			</tr>
+		</table>
+		
+
+		<div id="contenedor2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-body">
+		    		<output id="list"></output>
+			  </div>
+			</div>
+
+			<div class="drag-drop">
+		      	<input type="file" id="files" name="files" />
+		      	<span class="">
+		        	<i class="glyphicon glyphicon-upload bottom pulsating"></i>
+		      	</span>
+		      	<label>Sube una imagen del producto</label>
+		      	<br>
+		      
+		      	<script type="text/javascript">
+		  		function archivo(evt) {
+			      var files = evt.target.files; // FileList object
+			       
+			        //Obtenemos la imagen del campo "file". 
+			      for (var i = 0, f; f = files[i]; i++) {         
+			           //Solo admitimos imágenes.
+			           if (!f.type.match('image.*')) {
+			                continue;
+			           }
+			       
+			           var reader = new FileReader();
+			           
+			           reader.onload = (function(theFile) {
+			               return function(e) {
+			               // Creamos la imagen.
+			                      document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+			               };
+			           })(f);
+			 
+			           reader.readAsDataURL(f);
+			       }
+				}
+				document.getElementById('files').addEventListener('change', archivo, false);
+		  		</script>	
+		    </div>
+		    
+		</div>
+	</div>
+
+	<button type="submit">enviar</button>
+	</form>
+</div>
+</body>
+</html>

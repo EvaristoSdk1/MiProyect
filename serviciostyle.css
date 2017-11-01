@@ -1,0 +1,48 @@
+.user img {
+	width: 20px;
+    height: 20px; 
+}
+
+.MenuInicio :hover {
+background: #00B3FD;
+color: #fff;
+font-weight: bold;
+font-size: 15px;
+}
+
+#servicios {
+	color: #4674E8;
+}
+
+#TuCuenta {
+  	background-size:cover;
+  	opacity: .9;
+  	background-color: #0c1a1e;
+  	color: #FFFFFF;
+}
+
+ #TIniciarS {
+	text-align: center;
+ }
+
+#contenedor .panel {
+	width: 350px;
+}
+
+#contenedor {
+	overflow: hidden;
+}
+
+#serviciosarea1 {
+	float: left;
+}
+
+#serviciosarea2 {
+	float: left;
+	padding-left: 25px;
+}
+
+#serviciosarea3 {
+	float: left;
+	padding-left: 25px;
+}

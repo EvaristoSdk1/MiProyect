@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="registrostyle.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+	<title>Registro</title>
+	<script src="js/dcalendar.picker.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script type='text/javascript'>
+	$(function() {
+		//calendar call function
+		$('.datepicker').dcalendar();
+		$('.datepicker').dcalendarpicker();
+
+		    var max_fields = 10; //maximum input boxes allowed
+		    var x = 1; //initlal text box count
+		
+		$('#add').click(function () {		   
+			if(x < max_fields){ //max input box allowed
+			    x++; //text box increment
+			    $("#addblock").before('<div class="col-md-12 col-sm-12" id="deceased">	<a href="#" class="remove_field" title="Remove">X</a>	<div class="form-group col-md-3 col-sm-3">            <label for="name">Name*</label>            <input type="text" class="form-control input-sm" id="name" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="gender">Gender*</label>            <input type="text" class="form-control input-sm" id="gender" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="age">Age*</label>            <input type="text" class="form-control input-sm" id="age" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOB">Date of Birth or Exact Birth Year*</label>            <input type="text" class="form-control input-sm datepicker" id="DOB'+x+'" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOD">Date of Death or Exact Death Year*</label>             <input type="text" class="form-control input-sm datepicker" id="DOD'+x+'" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="mother">Deceased Person\'s Mother Name*</label>            <input type="text" class="form-control input-sm" id="mother" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="father">Deceased Person\'s Father Name*</label>            <input type="text" class="form-control input-sm" id="father" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">	    <label for="photo">Upload Photo*</label>	    <input type="file" id="photo">	    <p class="help-block">Please upload individual photo. Group photo is not acceptable.</p>	</div></div>');
+
+				$('.datepicker').dcalendarpicker();
+			}  else{
+				alert("Only 10 Names Allowed");
+			}  
+		});
+		$(document).on('click', '.remove_field', function(e){
+		        e.preventDefault(); 
+			$(this).parent('div').remove(); 
+			x--;
+		});
+
+		
+	});
+	</script>
+</header>
+<body>
+
+	<!--INICION DE LA BARRA DE NAVEGACION ENTRE EL SITIO WEB-->
+	<nav class="nav navbar navbar-toggleable-md bg-faded navbar-inverse">
+		<div class="container">
+		<div class="navbar-brand" id="Logo" >
+			<a href="#"><img src="img/settings-1.png" width="30" height="30" class="d-inline-block align-top"></a>
+		</div>
+		<div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav MenuInicio ">
+	        <li class="nav-item">
+	        	<a class="nav-link" href="index.html">Inicio</a>
+	        </li>
+
+	        <li class="nav-item">
+	        	<a class="nav-link" href="#">Conocenos</a>
+	        </li class="nav-item">
+	        
+	        <li class="nav-item">
+	        	<a class="nav-link" href="catalogoProductos.html">Catalogos</a>
+	        </li>
+			
+			<li>
+				<a class="nav-link" href="#">Servicios</a>
+			</li>
+	      </ul>
+
+	      <ul class="nav navbar-nav navbar-right user">
+	        <li class="dropdown">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration:none;"><img src="img/user.png" alt="">Tu Cuenta<span class="caret"></span></a>
+				<ul class="dropdown-menu" id="TuCuenta">
+				<div class="container" style="width: 370px;" >
+					<h4 id="TIniciarS">Iniciar Sesion</h4>
+
+					<form role="form">
+						<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input type="text" class="form-control" id="focusedInput" placeholder="Nombre de Usuario">
+						</div>
+						</div>
+
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><b style="font-weight:800;"> #</b></span>
+								<input type="text" class="form-control" id="focusedInput" placeholder="Contraseña">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-6 pull-right">
+								<button class="btn btn-primary pull-right" data-href="#">SIGN IN</button>
+							</div>
+						</div><hr><br>
+					</form>
+
+					<br>
+					<p class="text-center" style="font-size:90%;">
+						<span class="col-sm-6"><a data-href="#fpassword" style="color:white;  text-decoration:none; cursor:pointer">Olvidaste tu contraseña?</a></span>
+						<span class="col-sm-6"><a data-href="#naccount" style="color:white; text-decoration:none;">No tienes una cuenta?<span style="color:red; cursor:pointer"> Crear Cuenta</span></a></span>
+					</p>
+
+				</div>
+				</ul>  
+	        </li>
+
+	        <li>
+	        	<a href="#" style="text-decoration:none;"><i class="glyphicon glyphicon-shopping-cart iconoVentas"></i>Tu carrito</a>
+	        </li>
+
+	      </ul>
+	    </div>
+	  	</div>
+	</nav>
+<!--FINAL DE LA BARRA DE NAVEGACION ENTRE EL SITIO WEB-->
+	<div class="container" id="contenedor1">
+	
+	<div id="textoregistrate">
+		<label style="font-size: 30px;">
+			<strong>
+				REGISTRATE AHORA MISMO
+			</strong>
+		</label><br>
+		<label style="font-size: 30px; padding-left: 30%">
+			<strong>
+				EN
+			</strong>
+		</label><br>
+		<label style="font-size: 30px; padding-left: 10%">
+			<strong>
+				FERRETERIA<span>.COM</span>	
+			</strong>
+		</label><br><br><br>
+		<div>
+			<img src="img/logo_pidelo.png" alt="">
+		</div><br><br>
+		<label style="font-size: 20px;">
+			<strong>
+				TUS PEDIDOS SON 100% SEGUROS
+			</strong>
+		</label><br>
+		<label style="font-size: 20px;">
+			<strong>
+				ENVIO GRATIS
+			</strong>
+		</label>
+	</div>
+	
+	<div id="contenedorformulario">
+        <div class="row centered-form">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    	<h4 class="panel-title" id="TituloRegistro">Puedes iniciar con el registro ahora mismo</h4>
+			 	</div>
+			 	<div class="panel-body">
+			    	<form role="form" id="colorTextFormulario">
+						<div class="form-group">
+			    			<label class="control-label" for="Training">Nombre de Usuario</label><br>
+			    		<div class="input-group">
+			    			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+			    			<input style="width: 143px" type="email" name="idUsuario" id="idUsuario" class="form-control input-sm" placeholder="Nombre de Usuario">
+			    		</div>
+			    		</div>
+
+			    		<div class="row">
+			    		<div class="col-xs-6 col-sm-6 col-md-6">
+			    			<label class="control-label" for="Training">Nombre</label><br>
+			    		<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Nombre">
+			    		</div>
+			    		</div>
+								
+						<div class="col-xs-6 col-sm-6 col-md-6">
+			    			<label class="control-label" for="Training">Apellidos</label><br>
+			    		<div class="form-group">
+			    			<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Apellidos">
+			    		</div>
+			    		</div>
+
+			    		</div>
+							
+		    			<div class="form-group">
+		    			<label class="control-label" for="Training">Correo Electronico</label><br>
+		    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+		    			</div>
+
+		    			<div class="row">
+		    				<div class="col-xs-6 col-sm-6 col-md-6">
+		    					<div class="form-group">
+		    					<label class="control-label" for="Training">Contraseña</label><br>
+		    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+		    					</div>
+		    				</div>
+
+		    				<div class="col-xs-6 col-sm-6 col-md-6">
+		    					<div class="form-group">
+		    					<label class="control-label" for="Training">Confirmar contraseña</label><br>
+		    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+		    					</div>
+		    				</div>
+		    			</div>
+
+			    		<div class="form-group">
+						<label class="control-label" for="Training">Fecha de Registro</label><br>
+						<div class="input-group">
+        					<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        					<input type="text" class="form-control input-sm datepicker" id=" DOD" placeholder="">
+   						</div>
+   						</div>
+   							
+		    			<div class="form-group">
+		    			<label class="control-label" for="Training">Numero de Telefono</label><br>
+						<div class="input-group">
+  							<span class="input-group-addon">+52</span>
+  							<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Numero de telefono" type="text" required="">
+						</div>
+						</div>
+
+						
+
+						<div class="form-group">
+								<label class="col-md-2 control-label" for="Training">Sexo</label>
+							<div class="col-md-4" style="width: 250px"> 
+							<label class="radio-inline" for="Training-0">
+  								<input type="radio" name="Training" id="Training-0" value="yes" checked="checked">
+  							Hombre
+							</label> 
+							<label class="radio-inline" for="Training-1">
+  								<input type="radio" name="Training" id="Training-1" value="no">
+  							Mujer
+							</label>
+							</div>
+						</div>
+						<br><hr>
+
+			    		<input type="submit" value="REGISTRAR" class="btn btn-info btn-block">
+			    		
+			    	</form>
+			    </div>
+	    	</div>
+    	</div>
+    </div>
+
+    </div>
+
+</body>
+</html>

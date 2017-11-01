@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="usuariopanelstyle.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/usuariopaneljs"></script>
+	<meta charset="UTF-8">
+	<title>Panel Usuario</title>
+</head>
+<body>
+	
+	<div class="mail-box">
+        <aside class="sm-side">
+        <div class="user-head">
+            <a class="inbox-avatar" href="javascript:;">
+            <img src="img/businessman.png"></a>
+		<div class="user-name">
+            <h5>Administrador</h5>
+        </div>
+		<br>
+            <div class="btn-group">
+            	<button data-toggle="dropdown" href="#" class="btn" >
+            		Sesion <i class="glyphicon glyphicon-chevron-down"></i>
+            	</button>
+               	<ul class="dropdown-menu">
+                    <li><a href="#"> Cerrar sesion</a></li>
+                </ul>
+            </div>
+
+        </div>
+		<br><br>
+        <ul class="inbox-nav inbox-divider">
+            <li>
+                <a class="navbar-brand" href="#" ><i class="glyphicon glyphicon-home"></i> Pagina de Inicio</a>
+			</li>
+        </ul>
+
+        <ul class="inbox-nav inbox-divider">
+        	<li class="active"> 
+                <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-list-alt"></i>Mis pedidos</a>
+            </li>
+
+            <li> 
+                <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-user"></i>Mi informacion</a>
+            </li>
+        </ul>
+			
+        </aside>
+
+       	<aside class="lg-side">
+          	<div class="inbox-head">
+                <h3>LISTA DE PEDIDOS</h3>
+            <form action="#" class="pull-right position">
+            </form>
+            </div>
+
+           	<div class="inbox-body">
+            <div class="mail-option">
+
+           	<ul class="unstyled inbox-pagination">
+                <li><span>1-50 of 234</span></li>
+                <li>
+               		<a class="np-btn" href="#"><i class="glyphicon glyphicon-chevron-left  pagination-left"></i></a>
+                </li>
+
+                <li>
+                 	<a class="np-btn" href="#"><i class="glyphicon glyphicon-chevron-right pagination-right"></i></a>
+                </li>
+            </ul>
+            </div>
+
+            <table class="table table-inbox table-hover">
+               	<tbody>
+				<thead>
+					<tr>
+						<th class="text-center">Codigo del pedido</th>
+						<th class="text-center">Fecha</th>
+						<th class="text-center">Ver detalle del pedido</th>
+					</tr>
+			    </thead>
+
+                    <tr>
+			            <td>0000001</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center">
+						<a class='btn btn-info btn-lg' data-toggle="modal" data-target="#miModal"><span class="glyphicon glyphicon-edit"></span> Ver</a>
+						</td>
+					</tr>
+
+			        <tr>
+			            <td>0000002</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000003</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000004</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000005</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000006</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000007</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000008</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+			        <tr>
+			            <td>0000009</td>
+			            <td>26/07/2017</td>
+			            <td class="text-center"><a class='btn btn-info btn-lg' href="#"><span class="glyphicon glyphicon-edit"></span> Ver</a></td>
+			        </tr>
+
+                </tbody>
+            </table>
+            </div>
+        </aside>
+    </div>
+
+
+	<div class="modal fade" id="miModal">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header">
+		<button class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+		<h3 class="modal-title">Lista de productos</h3>
+	</div>
+
+	<div class="modal-body" >
+		<div class="row" >
+		<div class="well">
+		<div class="row">
+
+		<div class="col-xs-6 col-sm-6 col-md-6">
+			<address class="text-left">
+				<strong>Elf Cafe</strong>
+				<br>
+				2135 Sunset Blvd
+				<br>
+				Los Angeles, CA 90026
+				<br>
+				<abbr title="Phone">P:</abbr> (213) 484-6829
+			</address>
+		</div>
+
+		<div class="col-xs-6 col-sm-6 col-md-6 text-right">
+			<p>
+				<em>Date: 1st November, 2013</em>
+			</p>
+
+			<p>
+				<em>Receipt #: 34522677W</em>
+			</p>
+		</div>
+		</div>
+
+		<div class="row">
+		<div class="text-center">
+			<h1>Receipt</h1>
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>#</th>
+					<th class="text-center">Price</th>
+					<th class="text-center">Total</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="col-md-9" style="text-align: left"><h4><em>Baked Rodopa Sheep Feta</em></h4></td>
+					<td class="col-md-1" style="text-align: center"> 2 </td>
+					<td class="col-md-1 text-center">$13</td>
+					<td class="col-md-1 text-center">$26</td>
+				</tr>
+
+				<tr>
+					<td class="col-md-9" style="text-align: left"><h4><em>Lebanese Cabbage Salad</em></h4></td>
+					<td class="col-md-1" style="text-align: center"> 1 </td>
+					<td class="col-md-1 text-center">$8</td>
+					<td class="col-md-1 text-center">$8</td>
+				</tr>
+
+				<tr>
+					<td class="col-md-9" style="text-align: left"><h4><em>Baked Tart with Thyme and Garlic</em></h4></td>
+					<td class="col-md-1" style="text-align: center"> 3 </td>
+					<td class="col-md-1 text-center">$16</td>
+					<td class="col-md-1 text-center">$48</td>
+				</tr>
+
+				<tr>
+					<td>   </td>
+					<td>   </td>
+					<td class="text-right">
+                        <p>
+                            <strong>Subtotal: </strong>
+                        </p>
+                        <p>
+                            <strong>Tax: </strong>
+                        </p>
+                    </td>
+
+                    <td class="text-center">
+	                    <p>
+	                        <strong>$6.94</strong>
+	                    </p>
+	                    <p>
+	                        <strong>$6.94</strong>
+	                    </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                    <td class="text-center text-danger"><h4><strong>$31.53</strong></h4></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    	</div>
+		</div>
+				
+ 	</div>
+	</div>
+	</div>
+	</div>
+
+</body>
+</html>
